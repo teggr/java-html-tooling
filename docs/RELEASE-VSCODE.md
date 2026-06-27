@@ -3,14 +3,14 @@
 This document describes local packaging and publishing for the extension.
 
 Extension ID:
-- dev-rebelstack.j2html-preview
+- RebelCraft.j2html-preview
 
 ## Prerequisites
 
 - Node.js 18+
 - npm
 - VS Code Extension Manager (vsce) available via dev dependency
-- Marketplace publisher created: dev-rebelstack
+- Marketplace publisher created: RebelCraft (https://marketplace.visualstudio.com/manage/publishers/RebelCraft)
 
 ## Build and verify locally
 
@@ -36,7 +36,7 @@ One-time login on your machine:
 
 ```bash
 cd j2html-preview-vscode
-npx vsce login dev-rebelstack
+npx vsce login RebelCraft
 ```
 
 Publish current package.json version:
@@ -63,5 +63,5 @@ npx vsce publish
 
 ## Notes
 
-- Publisher identifiers cannot contain dots, so dev-rebelstack is valid while dev.rebelcraft is not.
+- PAT must be created at https://dev.azure.com/rebelcraft with Marketplace → Manage scope.
 - If publish fails after version bump, fix the issue and publish the same version if it has not been accepted by Marketplace.
